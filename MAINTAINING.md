@@ -6,13 +6,13 @@
 
 每个版本的安装包资产名固定为 **mingyu-stars.apk**，清单资产名固定为 **manifest.json**。不要求用户随版本重新填写地址。
 
-## 当前发布 0.1.12
+## 当前发布 0.1.13
 
-1. 使用最终审核的 Android APK：application_id 为 com.changgeng.astro、version_name 为 0.1.12、version_code 为 13；核对实际包内版本、签名和旧版覆盖兼容性。将上传副本命名为 mingyu-stars.apk。
+1. 使用最终审核的 Android APK：application_id 为 com.changgeng.astro、version_name 为 0.1.13、version_code 为 14；核对实际包内版本、签名和旧版覆盖兼容性。将上传副本命名为 mingyu-stars.apk。
 2. 对这份最终上传文件计算完整 SHA256 和字节数。清单必须引用同一份 APK，不得沿用候选包的校验值。
-3. 建立 tag 为 v0.1.12 的 Release 草稿，放入本版发布说明、APK、清单，以及与二进制对应的源码包、依赖来源和必要构建材料。源码包由源码维护线提供；仅给上游链接或分发仓自动源码压缩包不够。
+3. 建立 tag 为 v0.1.13 的 Release 草稿，放入本版发布说明、APK、清单，以及与二进制对应的源码包、依赖来源和必要构建材料。源码包由源码维护线提供；仅给上游链接或分发仓自动源码压缩包不够。
 4. 完成资产核对后，发布为 GitHub 正式 Release，并明确设为 Latest。**不要勾选 pre-release，也不要停在 draft**；名称和正文仍写“公开试用版”。用户可见版本号只保留数字；正式 Release 的分发状态不代表产品已完成全部真机验收。
-5. 从匿名访问的公网入口下载清单与 APK，核对应用ID、版本、文件大小和 SHA256；确认 latest 解析到本次版本。再验证手机的检查、下载、校验及手动安装流程，按实际结果记录验收范围。
+5. 从匿名访问的公网入口完整下载 APK、对应源码 ZIP、manifest.json、SHA256SUMS.txt 四项资产，逐项核对文件大小和 SHA256，并核清单中的应用ID、版本；确认 latest 解析到本次版本。再验证手机的检查、下载、校验及手动安装流程，按实际结果记录验收范围。
 
 GitHub 官方说明：[Latest 资产链接](https://docs.github.com/en/repositories/releasing-projects-on-github/linking-to-releases)、[Latest Release API](https://docs.github.com/en/rest/releases/releases#get-the-latest-release)。Latest 不取草稿或预发布版本。
 
@@ -22,9 +22,9 @@ GitHub 官方说明：[Latest 资产链接](https://docs.github.com/en/repositor
 |---|---|
 | schema_version | 数字 1 |
 | application_id | com.changgeng.astro |
-| version_code | 数字 13 |
-| version_name | 0.1.12 |
-| apk_url | 本版本固定地址 https://github.com/CGM2026/mingyu-stars/releases/download/v0.1.12/mingyu-stars.apk |
+| version_code | 数字 14 |
+| version_name | 0.1.13 |
+| apk_url | 本版本固定地址 https://github.com/CGM2026/mingyu-stars/releases/download/v0.1.13/mingyu-stars.apk |
 | sha256 | 最终APK的64位十六进制SHA256 |
 | size_bytes | 最终APK的实际字节数，整数 |
 | notes | 简短中文更新说明，字符串 |
